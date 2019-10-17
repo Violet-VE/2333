@@ -2,7 +2,7 @@
 
 This is just a library of books on the code cloud.
 
-仓库地址：https://gitee.com/chuner821/houmo/raw/master/chuner.json
+仓库地址：https://raw.githubusercontent.com/YuSheng821/2333/master/chuner.json
 
 ##### 目前已收录
 
