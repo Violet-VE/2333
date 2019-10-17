@@ -1,0 +1,462 @@
+{
+  "name": "By 纯二",
+  "summary": "This is just a book source repository.\n更新说明：\n1. 修复【无弹窗小说网】无法读取章节列表\n2. 修复【新笔趣阁】正文加载出错\n3. 新增【望海阅读】",
+  "list": [
+    {
+      "name": "轻小说文库",
+      "url": "http://www.wenku8.net/index.php",
+      "category": 2,
+      "rank": 5,
+      "auth": true,
+      "version": 100
+    },
+    {
+      "name": "My716",
+      "url": "http://api.zhuishushenqi.com",
+      "category": 3,
+      "rank": 41,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "中学生读物",
+      "url": "https://fox2008.cn",
+      "category": 0,
+      "rank": 12,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "必看网",
+      "url": "https://www.biikan.com",
+      "category": 0,
+      "rank": 11,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "红杏APP",
+      "url": "http://free.ilemi.cn",
+      "category": 1,
+      "rank": 8,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "猎鹰小说APP",
+      "url": "http://api.book.lieying.cn",
+      "category": 1,
+      "rank": 13,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "墨色阅读",
+      "url": "http://api.zhuishushenqi.com",
+      "category": 1,
+      "rank": 4,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "gdugm716",
+      "url": "http://lunbo.gdugm.cn",
+      "category": 3,
+      "rank": 8,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "爱看书A",
+      "url": "http://cx.ikanshu.cn",
+      "category": 1,
+      "rank": 13,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "免费电子书",
+      "url": "https://cxb-pro.cread.com",
+      "category": 3,
+      "rank": 13,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "免费小说①",
+      "url": "https://reader.browser.miui.com",
+      "category": 1,
+      "rank": 15,
+      "auth": false,
+      "version": 103
+    },
+    {
+      "name": "有度中文网",
+      "url": "https://www.yoduzw.com",
+      "category": 1,
+      "rank": 10,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "文墨中文网",
+      "url": "https://www.kygso.com",
+      "category": 1,
+      "rank": 8,
+      "auth": false,
+      "version": 103
+    },
+    {
+      "name": "爱下",
+      "url": "https://www.ixdzs.com",
+      "category": 1,
+      "rank": 17,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "追读小说",
+      "url": "https://service.nickbussok.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "扎堆小说",
+      "url": "http://touchlife.cootekservice.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "中文书城APP",
+      "url": "http://app-inter-bookstore.cread.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "17K小说",
+      "url": "http://api.ali.17k.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "免费小说②",
+      "url": "https://reader.browser.duokan.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "思路客",
+      "url": "https://www.siluke.tw",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "新笔趣阁",
+      "url": "https://www.xbiquge6.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "笔趣阁①",
+      "url": "https://www.biquge.com.cn",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "笔趣阁②",
+      "url": "https://www.biquge.tw",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "铅笔小说",
+      "url": "https://www.x23qb.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "望海阅读",
+      "url": "https://m.wanghairead.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "手打小说网",
+      "url": "https://www.shouda8.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "顶点小说①",
+      "url": "https://www.booktxt.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "顶点小说②",
+      "url": "https://www.280xs.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 104
+    },
+    {
+      "name": "顶点小说③",
+      "url": "https://www.xs222.tw",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "追书网①",
+      "url": "https://www.bimo.cc",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "追书网②",
+      "url": "https://www.zhuishu5.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "58小说网",
+      "url": "http://www.58xs.tw",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "560小说网",
+      "url": "http://www.560xs.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "新八一中文",
+      "url": "https://www.x81zw.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "新书在线",
+      "url": "http://www.xinshuxs.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "UU小说",
+      "url": "http://www.uu234.cc",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "神马小说",
+      "url": "http://www.shenmaxs.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "文学迷",
+      "url": "https://www.wenxuemi6.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "天籁小说",
+      "url": "https://www.23txt.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "笔下之趣",
+      "url": "https://www.jid5.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "笔趣轩",
+      "url": "http://www.biqux.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "看毛线小说",
+      "url": "https://www.kanmaoxian.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "三七中文",
+      "url": "https://www.37zw.net",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "下书网",
+      "url": "https://www.xiashucom.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "啃书小说网",
+      "url": "https://www.kenshu.cc",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "快眼看书",
+      "url": "https://www.kuaiyankanshu.net",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "米兔小说",
+      "url": "https://www.m2m2.net",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "呵呵小说",
+      "url": "https://www.heheba.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "E小说",
+      "url": "https://www.exiaoshuo.cc",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "UU小说网",
+      "url": "http://www.uuxs.la",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "酷匠网",
+      "url": "https://www.kujiang.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "云来阁小说",
+      "url": "http://www.yunlaige.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "88读书网",
+      "url": "https://www.88dush.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "无弹窗小说网",
+      "url": "https://www.22ff.org",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 103
+    },
+    {
+      "name": "有道翻译",
+      "url": "https://m.youdao.com",
+      "category": 4,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "成语查询",
+      "url": "仅支持查询首字",
+      "category": 4,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "词典",
+      "url": "https://www.zdic.net",
+      "category": 4,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    }
+  ]
+}
