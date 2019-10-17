@@ -1,0 +1,35 @@
+{
+  "name": "笔趣阁②",
+  "version": 100,
+  "category": 1,
+  "url": "https://www.biquge.tw",
+  "charset": "utf-8",
+    "metadata": {
+    "name": [".s2 > a"],
+    "author": [".s4"],
+    "cover": ["#fmimg > img@attr->src"],
+    "summary": ["#intro"],
+    "category": [".s1@js->${this}.replace(/\\[|\\]/g,'')"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": [".s2 > a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": ".box_con > div > dl > dd:gt(12)",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "#content",
+    "filter":["@div"]
+  },
+  "search": {
+    "link": "https://sou.xanbhx.com/search?siteid=xsla&q=${key}",
+    "list": ".search-list > ul > li:gt(0)"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "name": "文墨中文网",
+  "version": 103,
+  "category": 1,
+  "url": "https://www.kygso.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["a.size18"],
+    "author": ["span.mr30 > a"],
+    "cover": ["img@attr->src"],
+    "summary": ["div.compulsory-row"],
+    "category": ["span.fl:nth-child(2) > span:nth-child(2) > a"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["a:nth-child(1)@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "a.compulsory-row-one",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div.pt-read-cont > div.size16"
+  },
+  "search": {
+    "link": "https://www.kygso.com/search/result.html?searchkey=${key}",
+    "list": "div.pt-rank-detail"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "百度热搜榜",
+        "link": "https://www.kygso.com/rank/baidu.html"
+      },
+      {
+        "name": "追书热搜榜",
+        "link": "https://www.kygso.com/rank/zhuishu.html"
+      },
+      {
+        "name": "书旗热搜榜",
+        "link": "https://www.kygso.com/rank/shuqi.html"
+      },
+      {
+        "name": "掌阅热搜榜",
+        "link": "https://www.kygso.com/rank/zhangyue.html"
+      },
+      {
+        "name": "17K鲜花榜",
+        "link": "https://www.kygso.com/rank/17k.html"
+      },
+      {
+        "name": "总点击榜",
+        "link": "https://www.kygso.com/rank/allvisit.html"
+      },
+      {
+        "name": "日点击榜",
+        "link": "https://www.kygso.com/rank/dayvisit.html"
+      },
+      {
+        "name": "推荐榜",
+        "link": "https://www.kygso.com/rank/vote.html"
+      }
+    ],
+    "list": "div.pt-rank-detail"
+    }
+  }

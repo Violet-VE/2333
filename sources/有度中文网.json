@@ -1,0 +1,89 @@
+{
+  "name": "有度中文网",
+  "version": 102,
+  "category": 3,
+  "url": "https://www.yoduzw.com",
+  "charset": "gbk",
+  "metadata": {
+    "name": ["h3 > a", "h2", "h1"],
+    "author": ["span.vam:nth-child(4)", "meta[property=og:novel:author]@attr->content", "strong.c_small:nth-child(1)"],
+    "cover": ["a.g_thumb > img@attr->_src", "i.g_thumb > img@attr->_src", "meta[property=og:image]@attr->content"],
+    "summary": ["p.fs16:nth-child(4)", "a.fs16", "div.h112 >p"],
+    "category": ["span.vam:nth-child(2)", "strong.c_small:nth-child(2)", "meta[property=og:novel:category]@attr->content"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["a:nth-child(1)@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "li.w33p",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div.read-content",
+    "filter":["@center"],
+    "page": {
+    "next": "a:matches(下一页)@attr->href"
+    }
+  },
+  "search": {
+    "link": "https://www.yoduzw.com/search@post->searchkey=${key}",
+    "list": "ul.ser-ret > li"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "世纪百强",
+        "link": "https://www.yoduzw.com/top100/"
+      },
+      {
+        "name": "智慧人生",
+        "link": "https://www.yoduzw.com/zhihuirensheng/"
+      },
+      {
+        "name": "玄幻奇幻",
+        "link": "https://www.yoduzw.com/xuanhuan/"
+      },
+      {
+        "name": "都市青春",
+        "link": "https://www.yoduzw.com/dushi/"
+      },
+      {
+        "name": "武侠仙侠",
+        "link": "https://www.yoduzw.com/xianxia/"
+      },
+      {
+        "name": "历史军事",
+        "link": "https://www.yoduzw.com/lishi/"
+      },
+      {
+        "name": "女生言情",
+        "link": "https://www.yoduzw.com/yanqing/"
+      },
+      {
+        "name": "网游竞技",
+        "link": "https://www.yoduzw.com/youxi/"
+      },
+      {
+        "name": "科幻灵异",
+        "link": "https://www.yoduzw.com/kehuan/"
+      },
+      {
+        "name": "二次元の",
+        "link": "https://www.yoduzw.com/2cy/"
+      }
+    ],
+    "list": "li.g_col_6",
+    "page": {
+      "index": 1,
+      "limit": 30,
+      "begin": "1",
+      "next": "${index}"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "有道翻译",
+  "version": 100,
+  "category": 4,
+  "url": "https://m.youdao.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["#inputText"],
+    "author": ["#translateResult"],
+    "cover": [],
+    "summary": [],
+    "category": [],
+    "status": [],
+    "update": [],
+    "lastChapter": [],
+    "link": [],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "",
+    "orderBy": 0,
+    "chapter": {
+      "name": "",
+      "link": ""
+    }
+  },
+  "content": {
+    "text": ""
+  },
+  "search": {
+    "link": "https://m.youdao.com/translate?inputtext=${key}&type=AUTO",
+    "list": "#bd"
+    }
+  }

@@ -1,0 +1,34 @@
+{
+  "name": "UU小说",
+  "version": 100,
+  "category": 1,
+  "url": "http://www.uu234.cc",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["a.green"],
+    "author": ["span.width111 > a"],
+    "cover": ["div.con_limg > img@attr->src"],
+    "summary": ["div.r_cons@js->${this}.match('内容简介:(.*)')[1]"],
+    "category": ["span.width369"],
+    "status": ["span.width85"],
+    "update": [],
+    "lastChapter": [],
+    "link": ["a.green@attr->href"],
+    "catalog": ["a.viewalllinks@attr->href"]
+  },
+  "catalog": {
+    "list": "div.clearfix:nth-child(7)>ul>li",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div.content"
+  },
+  "search": {
+    "link": "http://www.uu234.cc/search?wd=${key}",
+    "list": "ul.clearfix > li"
+  }
+}

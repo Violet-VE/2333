@@ -1,0 +1,71 @@
+{
+  "name": "gdugm716",
+  "version": 102,
+  "category": 3,
+  "url": "http://lunbo.gdugm.cn",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.title"],
+    "author": ["$.author"],
+    "cover": ["$.cover"],
+    "summary": ["$.longIntro"],
+    "category": ["$.cat"],
+    "status": [],
+    "update": [],
+    "lastChapter": [],
+    "link": ["$._id@js->'http://api.gdugm.cn/book/info?bookId=' + ${this}"],
+    "catalog": ["$._id@js->'http://api.gdugm.cn/toc/mix?&bookId=' + ${this}"]
+  },
+  "catalog": {
+    "list": "$.chapters.[*]",
+    "orderBy": 0,
+    "chapter": {
+      "name": "$.title",
+      "link": "$.link@js->'http://chapter.wgfgr.cn/chapter/' + encodeURIComponent(${this})"
+    }
+  },
+  "content": {
+    "text": "$.*.body"
+  },
+  "search": {
+    "link": "http://lunbo.gdugm.cn/book/search?key=${key}&start=0&limit=100",
+    "list": "$..books[*]"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "♂完结榜",
+        "link": "http://lunbo.gdugm.cn/node/info?nodeAlias=rankinglist-male-finish-total"
+      },
+      {
+        "name": "♂热搜榜",
+        "link": "http://lunbo.gdugm.cn/node/info?nodeAlias=rankinglist-male-hotsearch-total"
+      },
+      {
+        "name": "♂潜力榜",
+        "link": "http://lunbo.gdugm.cn/node/info?nodeAlias=rankinglist-male-potenial-total"
+      },
+      {
+        "name": "♂留存榜",
+        "link": "http://lunbo.gdugm.cn/node/info?nodeAlias=rankinglist-male-remain-total"
+      },
+      {
+        "name": "♀完结榜",
+        "link": "http://lunbo.gdugm.cn/node/info?nodeAlias=rankinglist-female-finish-total"
+      },
+      {
+        "name": "♀热搜榜",
+        "link": "http://lunbo.gdugm.cn/node/info?nodeAlias=rankinglist-female-hotsearch-total"
+      },
+      {
+        "name": "♀潜力榜",
+        "link": "http://lunbo.gdugm.cn/node/info?nodeAlias=rankinglist-female-potenial-total"
+      },
+      {
+        "name": "♀留存榜",
+        "link": "http://lunbo.gdugm.cn/node/info?nodeAlias=rankinglist-female-remain-total"
+      }
+    ],
+    "list": "$.books[*]"
+  }
+}

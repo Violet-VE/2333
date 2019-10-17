@@ -1,0 +1,34 @@
+{
+  "name": "酷匠网",
+  "version": 101,
+  "category": 1,
+  "url": "https://www.kujiang.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["h5 > a"],
+    "author": ["div.kjauthor > a"],
+    "cover": ["a.kjpic > img@attr->src"],
+    "summary": ["p.kjintro-search"],
+    "category": ["span.kjstatus"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["a.kjpic@attr->href"],
+    "catalog": ["div.last_nine_title > a@attr->href"]
+  },
+  "catalog": {
+    "list": "ol.zero > li",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div.content"
+  },
+  "search": {
+    "link": "https://www.kujiang.com/search?keyword=${key}",
+    "list": "section.padded > div"
+  }
+}

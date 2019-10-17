@@ -1,0 +1,34 @@
+{
+  "name": "成语查询",
+  "version": 100,
+  "category": 4,
+  "url": "http://www.51bc.net",
+  "charset": "gb2312",
+  "metadata": {
+    "name": ["a"],
+    "author": [],
+    "cover": [],
+    "summary": [],
+    "category": [],
+    "status": [],
+    "update": [],
+    "lastChapter": [],
+    "link": [],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "",
+    "orderBy": 0,
+    "chapter": {
+      "name": "",
+      "link": ""
+    }
+  },
+  "content": {
+    "text": ""
+  },
+  "search": {
+    "link": "http://www.51bc.net/cy/serach.php?f_type=chengyu&f_type2=1&f_key=${key}",
+    "list": "tbody > tr:nth-of-type(2) > td > a"
+    }
+  }

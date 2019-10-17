@@ -1,0 +1,35 @@
+{
+  "name": "望海阅读",
+  "version": 100,
+  "category": 1,
+  "url": "https://m.wanghairead.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.book_name"],
+    "author": ["$.book_author"],
+    "cover": ["$.book_img"],
+    "summary": ["$.book_description"],
+    "category": ["$.d_type_name"],
+    "status": [""],
+    "update": ["$.data.latest_time"],
+    "lastChapter": ["$.data.latest_chapter"],
+    "link": ["$.book_id@js->'https://m.wanghairead.com/api/5b93ff93d1e64?book_id=' + ${this}"],
+    "catalog": ["$.data.latest_chapter_id@js->'https://m.wanghairead.com/api/5be4eb09924a2?chapter_id=' + ${this} + '&num=19999&page=1'"]
+  },
+  "catalog": {
+    "list": "$.data.data.data[*]",
+    "orderBy": 0,
+    "chapter": {
+      "name": "$.chapter_name",
+      "link": "$.book_chapter_id@js->'https://m.wanghairead.com/api/5b9492fbef2a0?chapter_id=' + ${this}"
+    }
+  },
+  "content": {
+    "text": "$.data.text",
+    "filter":["@h3"]
+  },
+  "search": {
+    "link": "https://m.wanghairead.com/api/Book/key_search?key_word=${key}",
+    "list": "$.data.book_name[*]"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "笔下之趣",
+  "version": 102,
+  "category": 1,
+  "url": "https://www.jid5.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["h4 > a"],
+    "author": ["div.author@js->${this}.match('作者：(.*)')[1]"],
+    "cover": ["div.bookimg > a > img@attr->src"],
+    "summary": ["div.bookinfo > p"],
+    "category": ["div.cat@js->${this}.match('分类：(.*)')[1]"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["div.bookimg > a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "div.listmain > dl > dd",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div#content"
+  },
+  "search": {
+    "link": "https://www.jid5.com/s.php?ie=gbk&q=${key}",
+    "list": "div.bookbox"
+  }
+}

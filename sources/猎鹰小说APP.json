@@ -1,0 +1,92 @@
+{
+  "name": "猎鹰小说APP",
+  "version": 100,
+  "category": 1,
+  "url": "http://api.book.lieying.cn",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.title"],
+    "author": ["$.author"],
+    "cover": ["$.cover"],
+    "summary": ["$.shortIntro"],
+    "category": ["$.sourceName"],
+	"status":[],
+    "update": ["$.updated"],
+	"lastChapter":["$.lastChapter"],
+    "link": ["$._id@js->'http://api.book.lieying.cn/Book/detail?bookId=' + ${this}"],
+    "catalog": ["$._id@js->'http://api.book.lieying.cn/Book/getChapterListByBookId?bookId=' + ${this}"],
+    "custom": ["$._id"]
+  },
+  "catalog": {
+    "list": "$..chapters[*]",
+    "orderBy": 0,
+    "chapter": {
+      "name": "$..title",
+      "link": "$.._id@js->'http://api.book.lieying.cn/Book/getChapterContent?bookId=' + ${custom[0]} + '&chapterId=' + ${this}"
+    }
+  },
+  "content": {
+    "text": "$..body"
+  },
+  "search": {
+    "link": "http://api.book.lieying.cn/Book/search?query=${key}",
+    "list": "$.books[*]"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "出版人气榜",
+        "link": "http://api.book.lieying.cn/Book/getListByRankId?rankingId=61&start=0&limit=20"
+      },
+      {
+        "name": "出版热追榜",
+        "link": "http://api.book.lieying.cn/Book/getListByRankId?rankingId=62&start=0&limit=20"
+      },
+      {
+        "name": "出版收藏帮",
+        "link": "http://api.book.lieying.cn/Book/getListByRankId?rankingId=63&start=0&limit=20"
+      },
+      {
+        "name": "出版热搜榜",
+        "link": "http://api.book.lieying.cn/Book/getListByRankId?rankingId=64&start=0&limit=20"
+      },
+      {
+        "name": "出版新书榜",
+        "link": "http://api.book.lieying.cn/Book/getListByRankId?rankingId=65&start=0&limit=20"
+      },
+	    {
+        "name": "男频人气榜",
+        "link": "http://api.book.lieying.cn/Book/getListByRankId?rankingId=1&start=0&limit=20"
+      },
+      {
+        "name": "男频热追榜",
+        "link": "http://api.book.lieying.cn/Book/getListByRankId?rankingId=4&start=0&limit=20"
+      },
+      {
+        "name": "男频热搜榜",
+        "link": "http://api.book.lieying.cn/Book/getListByRankId?rankingId=6&start=0&limit=20"
+      },
+      {
+        "name": "男频新书榜",
+        "link": "http://api.book.lieying.cn/Book/getListByRankId?rankingId=9&start=0&limit=20"
+      },
+      {
+        "name": "女频人气榜",
+        "link": "http://api.book.lieying.cn/Book/getListByRankId?rankingId=27&start=0&limit=20"
+      },
+      {
+        "name": "女频热追榜",
+        "link": "http://api.book.lieying.cn/Book/getListByRankId?rankingId=30&start=0&limit=20"
+      },
+      {
+        "name": "女频热搜榜",
+        "link": "http://api.book.lieying.cn/Book/getListByRankId?rankingId=32&start=0&limit=20"
+      },
+      {
+        "name": "女频新书榜",
+        "link": "http://api.book.lieying.cn/Book/getListByRankId?rankingId=35&start=0&limit=20"
+      }
+    ],
+    "list": "$.books[*]"
+  }
+}

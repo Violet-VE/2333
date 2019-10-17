@@ -1,0 +1,38 @@
+{
+  "name": "手打小说网",
+  "version": 102,
+  "category": 1,
+  "url": "https://www.shouda8.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["a:nth-child(2)"],
+    "author": ["a.author"],
+    "cover": ["a.bookimg > img@attr->src"],
+    "summary": ["p.intro"],
+    "category": ["a:nth-child(3)"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["a:nth-child(1)@attr->href"],
+    "catalog": ["p.action > a:nth-child(1)@attr->href"]
+  },
+  "catalog": {
+    "list": "div.read > dl:gt(0)",
+    "orderBy": 0,
+    "booklet": {
+      "name": "dt > b",
+      "list": "dd"
+    },
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "#content > p:not(p:nth-last-child(1),p:nth-last-child(2))"
+  },
+  "search": {
+    "link": "https://www.shouda8.com/search.html@post->searchkey=${key}",
+    "list": "ul.library > li"
+  }
+}

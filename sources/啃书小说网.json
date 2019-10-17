@@ -1,0 +1,34 @@
+{
+  "name": "啃书小说网",
+  "version": 100,
+  "category": 1,
+  "url": "https://www.kenshu.cc",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["h3 > a"],
+    "author": ["p.author@js->${this}.match('作者：(.*)')[1]", "p.authorname > a"],
+    "cover": ["a.col-l > img@attr->src"],
+    "summary": ["p.intro@js->${this}.match('作品简介：(.*)')[1]"],
+    "category": ["span.text"],
+    "status": [],
+    "update": [],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["h3 > a@attr->href"],
+    "catalog": ["a.catalogbtn@attr->href"]
+  },
+  "catalog": {
+    "list": "ul.clearfix > li",
+    "orderBy": 0,
+    "chapter": {
+      "name": "span > a",
+      "link": "span > a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div.article-con"
+  },
+  "search": {
+    "link": "https://www.kenshu.cc/modules/article/search.php@post->area=2&searchkey=${key}",
+    "list": "ul.search-list > li"
+  }
+}

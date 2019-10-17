@@ -1,0 +1,38 @@
+{
+  "name": "铅笔小说",
+  "version": 101,
+  "category": 1,
+  "url": "https://www.x23qb.com",
+  "charset": "gbk",
+    "metadata": {
+    "name": ["h3 > a", "h1"],
+    "author": [".p_author > a"],
+    "cover": ["dt > a > img@attr->_src", "#bookimg > img@attr->src"],
+    "summary": [".book_des", "#bookintro > p:nth-child(1)"],
+    "category": [".book_other > span:nth-child(1)", "#count > ul > li:nth-child(1) > span"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "#chapterList > li",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "#TextContent",
+    "filter":["@center"],
+    "page": {
+      "next": ".mlfy_page > a:nth-child(5):matches(下一页)@attr->href"
+      }
+  },
+  "search": {
+    "link": "https://www.x23qb.com/search.php@post->searchkey=${key}",
+    "list": "#sitebox > dl"
+  }
+}

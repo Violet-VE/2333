@@ -1,0 +1,35 @@
+{
+  "name": "E小说",
+  "version": 102,
+  "category": 1,
+  "url": "https://www.exiaoshuo.cc",
+  "charset": "gb2312",
+  "metadata": {
+    "name": ["h3 > a"],
+    "author": ["div.book_other > span:nth-child(1)"],
+    "cover": ["img@attr->src"],
+    "summary": ["div.book_des"],
+    "category": ["div.book_other > span:nth-child(2)"],
+    "status": ["span.black:nth-child(3)"],
+    "update": ["span.green"],
+    "lastChapter": ["div.lastrecord > strong > a"],
+    "link": ["a:nth-child(1)@attr->href"],
+    "catalog": ["a.viewalllinks@attr->href"]
+  },
+  "catalog": {
+    "list": "div.clearfix > ul > li",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div.chapter_content",
+	  "filter":["@center"]
+  },
+  "search": {
+    "link": "https://www.exiaoshuo.cc/modules/article/search.php?searchkey=${key}",
+    "list": "div.sitembox > ul > li"
+  }
+}

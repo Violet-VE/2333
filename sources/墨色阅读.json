@@ -1,0 +1,55 @@
+{
+  "name": "墨色阅读",
+  "version": 100,
+  "category": 3,
+  "url": "http://api.zhuishushenqi.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.title"],
+    "author": ["$.author"],
+    "cover": ["$.cover@js->'http://statics.zhuishushenqi.com' + ${this}"],
+    "summary": ["$.shortIntro"],
+    "category": ["$.cat"],
+    "status": [],
+    "update": ["$..updated"],
+    "lastChapter": [],
+    "link": ["$._id@js->'http://api02u58f.zhuishushenqi.com/book/' + ${this}"],
+    "catalog": ["$._id@js->'$._id@js->'http://api.wgfgr.cn/toc/mix?bookId=' + ${this}"]
+  },
+  "catalog": {
+    "list": "$.chapters.[*]",
+    "orderBy": 0,
+    "chapter": {
+      "name": "$.title",
+      "link": "$.link@js->'http://chapter.wgfgr.cn/chapter/' + encodeURIComponent(${this})"
+    }
+  },
+  "content": {
+    "text": "$..body"
+  },
+  "search": {
+    "link": "http://api.zhuishushenqi.com/book/fuzzy-search?query=${key}&version=2&appName=mose",
+    "list": "$.books[?(@.contentType =='txt')]"
+  },
+   "rank": {
+    "link": [
+      {
+        "name": "传记名著",
+        "link": "http://api02u58f.zhuishushenqi.com/book/by-categories?appName=mose&major=传记名著&gender=press&platform=android&start=0&limit=50"
+      },
+      {
+        "name": "出版小说",
+        "link": "http://api02u58f.zhuishushenqi.com/book/by-categories?appName=mose&major=出版小说&gender=press&platform=android&start=0&limit=50"
+      },
+      {
+        "name": "成功励志",
+        "link": "http://api02u58f.zhuishushenqi.com/book/by-categories?appName=mose&major=成功励志&gender=press&platform=android&start=0&limit=50"
+      },
+      {
+        "name": "人文社科",
+        "link": "http://api02u58f.zhuishushenqi.com/book/by-categories?appName=mose&major=人文社科&gender=press&platform=android&start=0&limit=50"
+      }
+    ],
+    "list": "$.books[?(@.contentType =='txt')]"
+  }
+}

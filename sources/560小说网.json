@@ -1,0 +1,34 @@
+{
+  "name": "560小说网",
+  "version": 100,
+  "category": 1,
+  "url": "http://www.560xs.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["span.s2 > a"],
+    "author": ["span.s4"],
+    "cover": ["div#fmimg > img@attr->src"],
+    "summary": ["div#intro"],
+    "category": ["meta[property=og:novel:category]@attr->content"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["span.s2 > a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "div#list > dl > dd:gt(12)",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div#content"
+  },
+  "search": {
+    "link": "http://www.560xs.com/SearchBook.aspx?t=920895234054625192&keyword=${key}",
+    "list": "div.novelslist2 > ul > li:gt(0)"
+  }
+}

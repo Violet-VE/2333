@@ -1,0 +1,35 @@
+{
+  "name": "17K小说",
+  "version": 100,
+  "category": 1,
+  "url": "http://api.ali.17k.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.book_name"],
+    "author": ["$.author_name"],
+    "cover": ["$.cover"],
+    "summary": ["$.intro"],
+    "category": ["$.category_name_2"],
+    "status": [],
+    "update": [],
+    "lastChapter": [],
+    "link": ["$..book_id@js->'http://api.17k.com/v2/book/' + ${this} + '/merge?iltc=1&app_key=4037465544&access_token=&time=0&_versions=971&client_type=1&_filter_data=1&channel=2&merchant=17KH5&_access_version=2&cps=0'"],
+    "catalog": ["$.data.book_id@js->'http://api.17k.com/v2/book/' + ${this} + '/volumes?app_key=4037465544&price_extend=1&_versions=979&client_type=2&_filter_data=1&channel=2&merchant=17Khwyysd&_access_version=2&cps=0'"],
+    "custom": ["$.data.book_id"]
+  },
+  "catalog": {
+    "list": "$.data..chapters[*]",
+    "orderBy": 0,
+    "chapter": {
+      "name": "$.name",
+      "link": "$.chapter_id@js->'http://api.17k.com/v2/book/' + ${custom[0]} + '/chapter/' + ${this} + '/content?app_key=4037465544&_access_version=2&cps=0&channel=2&_versions=979&merchant=17Khwyysd&client_type=1&_filter_data=1'"
+    }
+  },
+  "content": {
+    "text": "$.data.content"
+  },
+  "search": {
+    "link": "http://api.ali.17k.com/v2/book/search?sort_type=0&app_key=4037465544&_access_version=2&cps=0&channel=2&_versions=971&merchant=17KH5&page=1&client_type=1&_filter_data=1&class=0&key=${key}",
+    "list": "$.data[?(@.book_name)]"
+  }
+}

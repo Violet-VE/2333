@@ -1,0 +1,34 @@
+{
+  "name": "追书网②",
+  "version": 100,
+  "category": 1,
+  "url": "https://www.zhuishu5.com",
+  "charset": "gb2312",
+  "metadata": {
+    "name": ["h1 > a"],
+    "author": ["a.red"],
+    "cover": ["div.col-md-2 > img@attr->src"],
+    "summary": ["p#bookIntro"],
+    "category": ["span.blue:nth-child(3)"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["h1 > a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "dd.col-md-3",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div#htmlContent"
+  },
+  "search": {
+    "link": "https://www.zhuishu5.com/modules/article/search.php?searchkey=${key}",
+    "list": "div.panel"
+  }
+}

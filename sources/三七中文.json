@@ -1,0 +1,34 @@
+{
+  "name": "三七中文",
+  "version": 101,
+  "category": 1,
+  "url": "https://www.37zw.net",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["a"],
+    "author": ["li@js->${this}.match('/(.*)')[1]"],
+    "cover": ["div#fmimg > img@attr->src"],
+    "summary": ["div#intro"],
+    "category": ["meta[property=og:novel:category]@attr->content"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "div#list > dl > dd",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div#content"
+  },
+  "search": {
+    "link": "https://www.37zw.net/s/so.php?type=articlename&s=${key}",
+    "list": "div.novellist > ul > li"
+  }
+}

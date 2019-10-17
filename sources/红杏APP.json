@@ -1,0 +1,72 @@
+{
+  "name": "红杏APP",
+  "version": 100,
+  "category": 1,
+  "url": "http://free.ilemi.cn",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.bookName"],
+    "author": ["$.penName"],
+    "cover": ["$.bookCover"],
+    "summary": ["$.bookIntro"],
+    "category": ["$.source","$..cateName"],
+    "status":["$..writeStatusName"],
+    "update": ["$..lastModifyTime"],
+    "lastChapter":[],
+    "link": ["$.bookId@js->'http://free.ilemi.cn/v1/api/book/detail?bookId=' + ${this} + '&ime'"],
+    "catalog": ["$..bookId@js->'http://free.ilemi.cn/v1/api/book/chapter/list?bookId=' + ${this} + '&offset=1&limit=10&sort=chapterId&isAsc=true&imei'"],
+    "custom": ["$.data.bookId"]
+  },
+  "catalog": {
+    "list": "$.data[*]",
+    "orderBy": 0,
+    "chapter": {
+      "name": "$.chapterName",
+      "link": "$.chapterId@js->'http://free.ilemi.cn/v1/api/book/chapter/content?bookId=' + ${custom[0]} + '&chapterId=' + ${this} + '&imei'"
+    }
+  },
+  "content": {
+    "text": "$..content"
+  },
+  "search": {
+    "link": "http://free.ilemi.cn/v1/api/booksearch/query?queryStr=${key}&offset=1&limit=20&imei",
+    "list": "$.data[*]"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "小编力荐",
+        "link": "http://free.ilemi.cn/v1/api/recomment/books?recomentId=111&offset=1&limit=99&imei"
+      },
+      {
+        "name": "本周热门",
+        "link": "http://free.ilemi.cn/v1/api/recomment/books?recomentId=112&offset=1&limit=99&imei"
+      },
+      {
+        "name": "♂最热榜",
+        "link": "http://free.ilemi.cn/v1/api/bookrank/books?idfa=868551033017743&timestamp=1569130702379&app_key=lmzs&session_key=52d99a144cebb41822d1635f7a5ef210331fbcf50ab5f7dfad0e76ee08169fc7&rank_id=164&offset=1&limit=99&imei"
+      },
+      {
+        "name": "♂热搜榜",
+        "link": "http://free.ilemi.cn/v1/api/bookrank/books?idfa=868551033017743&timestamp=1569130895856&app_key=lmzs&session_key=52d99a144cebb41822d1635f7a5ef210331fbcf50ab5f7dfad0e76ee08169fc7&rank_id=165&offset=1&limit=99&imei"
+      },
+      {
+        "name": "♂推荐榜",
+        "link": "http://free.ilemi.cn/v1/api/bookrank/books?idfa=868551033017743&timestamp=1569130959442&app_key=lmzs&session_key=52d99a144cebb41822d1635f7a5ef210331fbcf50ab5f7dfad0e76ee08169fc7&rank_id=169&offset=1&limit=99&imei"
+      },
+	    {
+        "name": "♀最热榜",
+        "link": "http://free.ilemi.cn/v1/api/bookrank/books?idfa=868551033017743&timestamp=1569131012842&app_key=lmzs&session_key=52d99a144cebb41822d1635f7a5ef210331fbcf50ab5f7dfad0e76ee08169fc7&rank_id=170&offset=1&limit=99&imei"
+      },
+      {
+        "name": "♀热搜榜",
+        "link": "http://free.ilemi.cn/v1/api/bookrank/books?idfa=868551033017743&timestamp=1569131068425&app_key=lmzs&session_key=52d99a144cebb41822d1635f7a5ef210331fbcf50ab5f7dfad0e76ee08169fc7&rank_id=171&offset=1&limit=99&imei"
+      },
+      {
+        "name": "♀推荐榜",
+        "link": "http://free.ilemi.cn/v1/api/bookrank/books?idfa=868551033017743&timestamp=1569131138440&app_key=lmzs&session_key=52d99a144cebb41822d1635f7a5ef210331fbcf50ab5f7dfad0e76ee08169fc7&rank_id=175&offset=1&limit=99&imei"
+      }
+    ],
+    "list": "$.data[*]"
+  }
+}

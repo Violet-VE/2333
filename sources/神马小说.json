@@ -1,0 +1,34 @@
+{
+  "name": "神马小说",
+  "version": 100,
+  "category": 1,
+  "url": "http://www.shenmaxs.com",
+  "charset": "gbk",
+  "metadata": {
+    "name": ["a:nth-child(1)", "h1"],
+    "author": ["meta[property=og:novel:author]@attr->content"],
+    "cover": ["meta[property=og:image]@attr->content"],
+    "summary": ["meta[property=og:description]@attr->content"],
+    "category": ["meta[property=og:novel:category]@attr->content"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["a:nth-child(1)@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "ul#chapterlist > li",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "p#content"
+  },
+  "search": {
+    "link": "http://www.shenmaxs.com/modules/article/search.php@post->searchkey=${key}",
+    "list": "table.con > tbody > tr:gt(0)"
+  }
+}

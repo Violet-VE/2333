@@ -1,0 +1,34 @@
+{
+  "name": "88读书网",
+  "version": 101,
+  "category": 1,
+  "url": "https://www.88dush.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["h2 > a"],
+    "author": ["div.block_txt > p:nth-child(5)"],
+    "cover": ["div.block_img > a > img@attr->src"],
+    "summary": ["div.block_txt > p:nth-child(7)"],
+    "category": ["div.block_txt > p:nth-child(6)"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["h2 > a@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "div.mulu > ul > li",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div.yd_text2"
+  },
+  "search": {
+    "link": "https://so.88dush.com/search/so.php?search_field=0&q=${key}",
+    "list": "div.block"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "扎堆小说",
+  "version": 100,
+  "category": 1,
+  "url": "http://touchlife.cootekservice.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.bookTitle"],
+    "author": ["$.bookAuthor"],
+    "cover": ["$.bookCoverImage"],
+    "summary": ["$.bookDesc"],
+    "category": ["$.bookBClassificationName"],
+    "status": [],
+    "update": ["$.bookLatestUpdateTime"],
+    "lastChapter": [],
+    "link": ["$.bookId@js->'http://touchlife.cootekservice.com/doReader/enter_bookinfo_index?_token=d0239f40-4f7d-4c25-aedc-6d7d4a731501&bookId=' + ${this}"],
+    "catalog": [],
+    "extra": [
+      {
+        "key": "bookId",
+        "value": "$..detailedBookInfo.bookId"
+      }
+    ]
+  },
+  "catalog": {
+    "list": "$..bookChapterAllInfo[*]",
+    "orderBy": 0,
+    "chapter": {
+      "name": "$.chapterTitle",
+      "link": "$.chapterId@js->'http://touchlife.cootekservice.com/doReader/get_content_by_chapterId?_token=d0239f40-4f7d-4c25-aedc-6d7d4a731501&bookId=' + ${extra.bookId} + '&chapterId=' + ${this} + '&chapterCount=1'"
+    }
+  },
+  "content": {
+    "text": "$..chapterContent"
+  },
+  "search": {
+    "link": "http://touchlife.cootekservice.com/doReader/search_book?_token=73c38f52-dff3-4ca7-9054-f83ba8b8c629&action=search_book&search_keyword=${key}",
+    "list": "$.result[*]"
+  }
+}

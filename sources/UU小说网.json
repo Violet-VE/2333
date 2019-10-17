@@ -1,0 +1,34 @@
+{
+  "name": "UU小说网",
+  "version": 101,
+  "category": 1,
+  "url": "http://www.uuxs.la",
+  "charset": "gbk",
+  "metadata": {
+    "name": ["h3 > a"],
+    "author": ["p:nth-child(3) > i:nth-child(1)"],
+    "cover": ["a:nth-child(1) > img@attr->src"],
+    "summary": ["p:nth-child(5)"],
+    "category": ["p:nth-child(3) > i:nth-child(2)"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["a:nth-child(1)@attr->href"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "dl.chapterlist > dd",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div#BookText"
+  },
+  "search": {
+    "link": "http://www.uuxs.la/modules/article/search.php?searchkey=${key}",
+    "list": "div.item-pic"
+  }
+}

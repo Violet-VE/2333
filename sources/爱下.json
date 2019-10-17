@@ -1,0 +1,113 @@
+{
+  "name": "爱下",
+  "version": 102,
+  "category": 1,
+  "url": "https://www.ixdzs.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["h2 > a"],
+    "author": ["span.l1 > a"],
+    "cover": ["div.list_img > a >img@attr->src"],
+    "summary": ["p.b_intro"],
+    "category": ["i.cp"],
+    "status": [],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["h2 > a@attr->href"],
+    "catalog": ["a.d_ot:nth-child(2)@attr->href"]
+  },
+  "catalog": {
+    "list": "li.chapter",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div.content"
+  },
+  "search": {
+    "link": "https://www.ixdzs.com/bsearch?q=${key}",
+    "list": "div.box_k > ul > li"
+  },
+  "rank": {
+    "link": [
+        {
+          "name": "玄幻奇幻",
+          "link": "https://www.aixdzs.com/sort/1/index_0_0_0_"
+        },
+        {
+          "name": "修真仙侠",
+          "link": "https://www.aixdzs.com/sort/2/index_0_0_0_"
+        },
+        {
+          "name": "都市青春",
+          "link": "https://www.aixdzs.com/sort/3/index_0_0_0_"
+        },
+        {
+          "name": "历史军事",
+          "link": "https://www.aixdzs.com/sort/4/index_0_0_0_"
+        },
+        {
+          "name": "网游竞技",
+          "link": "https://www.aixdzs.com/sort/5/index_0_0_0_"
+        },
+        {
+          "name": "科幻灵异",
+          "link": "https://www.aixdzs.com/sort/6/index_0_0_0_"
+        },
+        {
+          "name": "言情穿越",
+          "link": "https://www.aixdzs.com/sort/7/index_0_0_0_"
+        },
+        {
+          "name": "耽美同人",
+          "link": "https://www.aixdzs.com/sort/8/index_0_0_0_"
+        },
+        {
+          "name": "侦探推理",
+          "link": "https://www.aixdzs.com/sort/12/index_0_0_0_"
+        },
+        {
+          "name": "台言古言",
+          "link": "https://www.aixdzs.com/sort/9/index_0_0_0_"
+        },
+        {
+          "name": "古典文学",
+          "link": "https://www.aixdzs.com/sort/11/index_0_0_0_"
+        },
+        {
+          "name": "外国文学",
+          "link": "https://www.aixdzs.com/sort/13/index_0_0_0_"
+        },
+        {
+          "name": "当代现代",
+          "link": "https://www.aixdzs.com/sort/14/index_0_0_0_"
+        },
+        {
+          "name": "童话故事",
+          "link": "https://www.aixdzs.com/sort/15/index_0_0_0_"
+        },
+        {
+          "name": "传记纪实",
+          "link": "https://www.aixdzs.com/sort/16/index_0_0_0_"
+        },
+        {
+          "name": "影视文学",
+          "link": "https://www.aixdzs.com/sort/18/index_0_0_0_"
+        },
+        {
+          "name": "其他类别",
+          "link": "https://www.aixdzs.com/sort/0/index_0_0_0_"
+        }
+    ],
+    "list": ".box_k > ul > li",
+     "page": {
+      "index": 1,
+      "limit": 20,
+      "begin": "1.html",
+      "next": "${index}.html"
+     }
+   }
+}

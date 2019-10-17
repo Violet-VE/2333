@@ -1,0 +1,37 @@
+{
+  "name": "下书网",
+  "version": 102,
+  "category": 1,
+  "url": "https://www.xiashucom.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["a.size18"],
+    "author": ["span.mr30 > a"],
+    "cover": ["div.pt-rank-detail > a > img@attr->src"],
+    "summary": ["div.compulsory-row"],
+    "category": ["span.fl:nth-child(2) > span:nth-child(2) > a"],
+    "status": ["meta[property=og:novel:status]@attr->content"],
+    "update": ["meta[property=og:novel:update_time]@attr->content"],
+    "lastChapter": ["meta[property=og:novel:latest_chapter_name]@attr->content"],
+    "link": ["a:nth-child(1)@attr->href"],
+    "catalog": ["a.orangeBtn:nth-child(2)@attr->href"]
+  },
+  "catalog": {
+    "list": "ul#toplist > li",
+    "orderBy": 0,
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": "div.size16",
+    "page": {
+    "next": "a:matches(下一页)@attr->href"
+    }
+  },
+  "search": {
+    "link": "https://www.xiashucom.com/search/result.html?searchkey=${key}",
+    "list": "div.pt-rank-detail"
+  }
+}

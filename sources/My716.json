@@ -1,0 +1,203 @@
+{
+  "name": "My716",
+  "version": 102,
+  "category": 3,
+  "url": "http://api.zhuishushenqi.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.title"],
+    "author": ["$.author"],
+    "cover": ["$.cover@js->'http://statics.zhuishushenqi.com' + ${this}"],
+    "summary": ["$.shortIntro"],
+    "category": ["$.cat", "$.majorCate"],
+    "update": [
+      "$.updated@js->function getTime(str){ var o = ''; var d = new Date(str); o = d.getUTCFullYear()+'-'+(d.getUTCMonth()+1)+'-'+d.getUTCDate()+' '+d.getUTCHours()+':'+d.getUTCMinutes()+':'+d.getUTCSeconds(); return o; } getTime(${this});"
+    ],
+    "lastChapter": ["$.lastChapter"],
+    "link": ["$._id@js->'http://api.wgfgr.cn/toc/mix?&bookId='+${this}"],
+    "catalog": []
+  },
+  "catalog": {
+    "list": "$.chapters",
+    "orderBy": 0,
+    "chapter": {
+      "name": "$.title",
+      "link": "$.link@js->'http://chapter.wgfgr.cn/chapter/' + encodeURIComponent(${this})"
+    }
+  },
+  "content": {
+    "text": "$.*.body"
+  },
+  "search": {
+    "link": "http://api.zhuishushenqi.com/book/fuzzy-search?query=${key}",
+    "list": "$.books[?(@.contentType =='txt')]"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "最热总榜",
+        "link": "http://api.zhuishushenqi.com/ranking/564d8494fe996c25652644d2"
+      },
+      {
+        "name": "好评周榜",
+        "link": "http://api.zhuishushenqi.com/ranking/5a6844aafc84c2b8efaa6b6e"
+      },
+      {
+        "name": "热搜周榜",
+        "link": "http://api.zhuishushenqi.com/ranking/5a6844f8fc84c2b8efaa8bc5"
+      },
+      {
+        "name": "潜力周榜",
+        "link": "http://api.zhuishushenqi.com/ranking/54d42e72d9de23382e6877fb"
+      },
+      {
+        "name": "留存总榜",
+        "link": "http://api.zhuishushenqi.com/ranking/564d8a004a15bb8369d9e28d"
+      },
+      {
+        "name": "完结周榜",
+        "link": "http://api.zhuishushenqi.com/ranking/564eb878efe5b8e745508fde"
+      },
+      {
+        "name": " VIP周榜",
+        "link": "http://api.zhuishushenqi.com/ranking/57eb86f0ef9e5a8f20543d7d"
+      },
+      {
+        "name": "包月总榜",
+        "link": "http://api.zhuishushenqi.com/ranking/5848d4a4602c289505581f6f"
+      },
+      {
+        "name": "圣诞热搜",
+        "link": "http://api.zhuishushenqi.com/ranking/582ed5fc93b7e855163e707d"
+      },
+      {
+        "name": "百度热搜",
+        "link": "http://api.zhuishushenqi.com/ranking/564ef4f985ed965d0280c9c2"
+      },
+      {
+        "name": "书旗热搜",
+        "link": "http://api.zhuishushenqi.com/ranking/564d80457408cfcd63ae2dd0"
+      },
+      {
+        "name": "起点月票",
+        "link": "http://api.zhuishushenqi.com/ranking/54d4306c321052167dfb75e4"
+      },
+      {
+        "name": "纵横月票",
+        "link": "http://api.zhuishushenqi.com/ranking/54d430962c12d3740e4a3ed2"
+      },
+      {
+        "name": "逐浪点击",
+        "link": "http://api.zhuishushenqi.com/ranking/5732aac02dbb268b5f037fc4"
+      },
+      {
+        "name": "17Ｋ鲜花",
+        "link": "http://api.zhuishushenqi.com/ranking/54d430e9a8cb149d07282496"
+      },
+      {
+        "name": "♂玄幻小说",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=玄幻&start=0&limit=50"
+      },
+      {        "name": "♂奇幻小说",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=奇幻&start=0&limit=50"
+      },
+      {
+        "name": "♂武侠小说",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=武侠&start=0&limit=50"
+      },
+      {
+        "name": "♂仙侠小说",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=仙侠&start=0&limit=50"
+      },
+      {
+        "name": "♂都市小说",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=都市&start=0&limit=50"
+      },
+      {
+        "name": "♂职场小说",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=职场&start=0&limit=50"
+      },
+      {
+        "name": "♂历史小说",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=历史&start=0&limit=50"
+      },
+      {
+        "name": "♂军事小说",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=军事&start=0&limit=50"
+      },
+      {
+        "name": "♂游戏小说",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=游戏&start=0&limit=50"
+      },
+      {
+        "name": "♂竞技小说",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=竞技&start=0&limit=50"
+      },
+      {
+        "name": "♂科幻小说",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=科幻&start=0&limit=50"
+      },
+      {
+        "name": "♂灵异小说",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=灵异&start=0&limit=50"
+      },
+      {
+        "name": "♂同人小说",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=同人&start=0&limit=50"
+      },
+      {
+        "name": "♂轻小说の",
+        "link": "http://api.zhuishushenqi.com/book/by-categories?gender=male&type=hot&major=轻小说&start=0&limit=50"
+      },
+      {
+        "name": "♀古代言情",
+        "link": "https://api.zhuishushenqi.com/book/by-categories?gender=female&type=hot&major=古代言情&minor=&start=0&limit=50"
+      },
+      {
+        "name": "♀现代言情",
+        "link": "https://api.zhuishushenqi.com/book/by-categories?gender=female&type=hot&major=现代言情&minor=&start=0&limit=50"
+      },
+      {
+        "name": "♀青春校园",
+        "link": "https://api.zhuishushenqi.com/book/by-categories?gender=female&type=hot&major=青春校园&minor=&start=0&limit=50"
+      },
+      {
+        "name": "♀纯爱小说",
+        "link": "https://api.zhuishushenqi.com/book/by-categories?gender=female&type=hot&major=纯爱&minor=&start=0&limit=50"
+      },
+      {
+        "name": "♀玄幻奇幻",
+        "link": "https://api.zhuishushenqi.com/book/by-categories?gender=female&type=hot&major=玄幻奇幻&minor=&start=0&limit=50"
+      },
+      {
+        "name": "♀武侠仙侠",
+        "link": "https://api.zhuishushenqi.com/book/by-categories?gender=female&type=hot&major=武侠仙侠&minor=&start=0&limit=50"
+      },
+      {
+        "name": "♀科幻小说",
+        "link": "https://api.zhuishushenqi.com/book/by-categories?gender=female&type=hot&major=科幻&minor=&start=0&limit=50"
+      },
+      {
+        "name": "♀游戏竞技",
+        "link": "https://api.zhuishushenqi.com/book/by-categories?gender=female&type=hot&major=游戏竞技&minor=&start=0&limit=50"
+      },
+      {
+        "name": "♀悬疑灵异",
+        "link": "https://api.zhuishushenqi.com/book/by-categories?gender=female&type=hot&major=悬疑灵异&minor=&start=0&limit=50"
+      },
+      {
+        "name": "♀同人小说",
+        "link": "https://api.zhuishushenqi.com/book/by-categories?gender=female&type=hot&major=同人&minor=&start=0&limit=50"
+      },
+      {
+        "name": "♀女尊小说",
+        "link": "https://api.zhuishushenqi.com/book/by-categories?gender=female&type=hot&major=女尊&minor=&start=0&limit=50"
+      },
+      {
+        "name": "♀莉莉小说",
+        "link": "https://api.zhuishushenqi.com/book/by-categories?gender=female&type=hot&major=莉莉&minor=&start=0&limit=50"
+      }
+    ],
+    "list": "$.ranking.books"
+  }
+}

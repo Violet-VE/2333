@@ -1,0 +1,103 @@
+{
+  "name": "免费电子书",
+  "version": 100,
+  "category": 3,
+  "url": "https://cxb-pro.cread.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.name", "$.newBookName"],
+    "author": ["$.author", "$.authorName"],
+    "cover": ["$.cover"],
+    "summary": ["$.summary", "$.intro"],
+    "category": ["$.categoryName"],
+    "status": [],
+    "update": ["$.updateDate"],
+    "lastChapter": [],
+    "link": ["$.id@js->'https://cxb-pro.cread.com/cx/bookDetailYS?bookid=' + ${this}", "$.bookid@js->'http://cx.ikanshu.cn/cx/bookDetailYS?bookid=' + ${this}"],
+    "catalog": ["$..bookVo.bookId@js->'https://cxb-pro.cread.com/cx/itf/getvolume?bookId=' + ${this}"],
+"extra": [
+      {
+        "key": "bookId",
+        "value": "$..bookVo.bookId"
+      }
+    ]
+  },
+  "catalog": {
+    "list": "$..bookChapters.*",
+    "orderBy": 0,
+    "chapter": {
+      "name": "$.name",
+      "link": "$.id@js->'https://cxb-pro.cread.com/cx/itf/chapterRead?chapterId=' + ${this} + '&bookId=' + ${extra.bookId} + '&full=0@header->cnid=10005&version=5&uid=10005&channelId=10005'"
+    }
+  },
+  "content": {
+    "text": "$..content"
+  },
+  "search": {
+    "link": "https://cxb-pro.cread.com/cx/searchbooks@post->version=5&keyword=${key}",
+    "list": "$.list[*]"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "♂追更榜",
+        "link": "https://cxb-pro.cread.com/cx/new/rankList?uid=79857733&cnid=14016&bdid=461&name=男生&index=41&pageSize=20&curpage="
+      },
+      {
+        "name": "♂完结榜",
+        "link": "https://cxb-pro.cread.com/cx/new/rankList?uid=79857733&cnid=14016&bdid=463&name=男生&index=1&pageSize=20&curpage="
+      },
+      {
+        "name": "♂力荐榜",
+        "link": "https://cxb-pro.cread.com/cx/new/rankList?uid=79857733&cnid=14016&bdid=464&name=男生&index=1&pageSize=20&curpage="
+      },
+      {
+        "name": "♂热搜榜",
+        "link": "https://cxb-pro.cread.com/cx/new/rankList?uid=79857733&cnid=14016&bdid=465&name=男生&index=1&pageSize=20&curpage="
+      },
+      {
+        "name": "♂飙升榜",
+        "link": "https://cxb-pro.cread.com/cx/new/rankList?uid=79857733&cnid=14016&bdid=466&name=男生&index=1&pageSize=20&curpage="
+      },
+      {
+        "name": "♂新书榜",
+        "link": "https://cxb-pro.cread.com/cx/new/rankList?uid=79857733&cnid=14016&bdid=467&name=男生&index=1&pageSize=20&curpage="
+      },
+      {
+        "name": "♀追更榜",
+        "link": "https://cxb-pro.cread.com/cx/new/rankList?uid=79857733&cnid=14016&bdid=470&name=女生&index=1&pageSize=20&curpage="
+      },
+      {
+        "name": "♀完结榜",
+        "link": "https://cxb-pro.cread.com/cx/new/rankList?uid=79857733&cnid=14016&bdid=474&name=女生&index=1&pageSize=20&curpage="
+      },
+      {
+        "name": "♀力荐榜",
+        "link": "https://cxb-pro.cread.com/cx/new/rankList?uid=79857733&cnid=14016&bdid=472&name=女生&index=1&pageSize=20&curpage="
+      },
+      {
+        "name": "♀热搜榜",
+        "link": "https://cxb-pro.cread.com/cx/new/rankList?uid=79857733&cnid=14016&bdid=471&name=女生&index=1&pageSize=20&curpage="
+      },
+      {
+        "name": "♀飙升榜",
+        "link": "https://cxb-pro.cread.com/cx/new/rankList?uid=79857733&cnid=14016&bdid=473&name=女生&index=1&pageSize=20&curpage="
+      },
+      {
+        "name": "♀新书榜",
+        "link": "https://cxb-pro.cread.com/cx/new/rankList?uid=79857733&cnid=14016&bdid=468&name=女生&index=1&pageSize=20&curpage="
+      },
+      {
+        "name": "出版人气",
+        "link": "https://cxb-pro.cread.com/cx/new/rankList?uid=79857733&cnid=14016&bdid=475&name=出版&index=1&pageSize=20&curpage="
+      }
+    ],
+    "list": "$..dataList[*]",
+    "page": {
+      "index": 1,
+      "limit": 20,
+      "begin": "1",
+      "next": "${index}"
+    }
+  }
+}

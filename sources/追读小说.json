@@ -1,0 +1,35 @@
+{
+  "name": "追读小说",
+  "version": 100,
+  "category": 1,
+  "url": "https://service.nickbussok.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.szBookName"],
+    "author": ["$.szAuthor"],
+    "cover": ["$.szConver", "$..szCover"],
+    "summary": ["$.szBriefDescp", "$..szDesc"],
+    "category": ["$..szThrdTypeName"],
+    "status": [],
+    "update": [],
+    "lastChapter": [],
+    "link": ["$.szBookID@js->'https://service.nickbussok.com/bookinfo/book?nType=1&aryBookID=' + ${this} + '&nNeedThrdTypeData=1&szFi4eld=nChapterCount%2CnLastUpdateTime%2CnOnlineNum%2CszCopyright%2CszLastChapter%2CnSaleStatus%2CnVersion'"],
+    "catalog": ["$..szBookId@js->'https://service.nickbussok.com/bookinfo/chapter?nType=2&szBookID=' + ${this} + '&nOffset=0&nLimit=' + ${custom[0]} + '&nSort=1'"],
+    "custom": ["$..nChapterCount"]
+  },
+  "catalog": {
+    "list": "$..aryChapter[*]",
+    "orderBy": 0,
+    "chapter": {
+      "name": "$.szChapterName",
+      "link": "$.szChapterURL"
+    }
+  },
+  "content": {
+    "text": ""
+  },
+  "search": {
+    "link": "https://service.nickbussok.com/book/search/result?szInput=${key}&nOffset=0&nLimit=10&nAuthorNum=1&szVersion=1",
+    "list": "$.anyData[*]"
+  }
+}
