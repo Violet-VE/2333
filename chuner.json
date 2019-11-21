@@ -3,12 +3,76 @@
   "summary": "This is just a book source repository.\n更新说明：\n1. 修复【无弹窗小说网】无法读取章节列表\n2. 修复【新笔趣阁】正文加载出错\n3. 新增【望海阅读】",
   "list": [
     {
-      "name": "必看网",
-      "url": "https://www.biikan.com",
-      "category": 0,
-      "rank": 11,
+      "name": "ABC小说网[推荐]",
+      "url": "http://www.abcxs.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "思路客",
+      "url": "https://www.siluke.tw",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "新笔趣阁",
+      "url": "https://www.xbiquge6.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 102
+    },
+    {
+      "name": "笔趣阁①",
+      "url": "https://www.biquge.com.cn",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "笔趣阁②",
+      "url": "https://www.biquge.tw",
+      "category": 1,
+      "rank": 0,
       "auth": false,
       "version": 100
+    },
+    {
+      "name": "顶点小说①",
+      "url": "https://www.booktxt.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
+      "name": "顶点小说②",
+      "url": "https://www.280xs.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 104
+    },
+    {
+      "name": "顶点小说③",
+      "url": "https://www.xs222.tw",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
+    },
+    {
+      "name": "铅笔小说",
+      "url": "https://www.x23qb.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 101
     },
     {
       "name": "红杏APP",
@@ -99,46 +163,6 @@
       "version": 100
     },
     {
-      "name": "思路客",
-      "url": "https://www.siluke.tw",
-      "category": 1,
-      "rank": 0,
-      "auth": false,
-      "version": 102
-    },
-    {
-      "name": "新笔趣阁",
-      "url": "https://www.xbiquge6.com",
-      "category": 1,
-      "rank": 0,
-      "auth": false,
-      "version": 102
-    },
-    {
-      "name": "笔趣阁①",
-      "url": "https://www.biquge.com.cn",
-      "category": 1,
-      "rank": 0,
-      "auth": false,
-      "version": 101
-    },
-    {
-      "name": "笔趣阁②",
-      "url": "https://www.biquge.tw",
-      "category": 1,
-      "rank": 0,
-      "auth": false,
-      "version": 100
-    },
-    {
-      "name": "铅笔小说",
-      "url": "https://www.x23qb.com",
-      "category": 1,
-      "rank": 0,
-      "auth": false,
-      "version": 101
-    },
-    {
       "name": "望海阅读",
       "url": "https://m.wanghairead.com",
       "category": 1,
@@ -153,30 +177,6 @@
       "rank": 0,
       "auth": false,
       "version": 102
-    },
-    {
-      "name": "顶点小说①",
-      "url": "https://www.booktxt.com",
-      "category": 1,
-      "rank": 0,
-      "auth": false,
-      "version": 100
-    },
-    {
-      "name": "顶点小说②",
-      "url": "https://www.280xs.com",
-      "category": 1,
-      "rank": 0,
-      "auth": false,
-      "version": 104
-    },
-    {
-      "name": "顶点小说③",
-      "url": "https://www.xs222.tw",
-      "category": 1,
-      "rank": 0,
-      "auth": false,
-      "version": 101
     },
     {
       "name": "追书网①",
