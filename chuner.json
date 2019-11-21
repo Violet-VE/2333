@@ -3,14 +3,6 @@
   "summary": "This is just a book source repository.\n更新说明：\n1. 修复【无弹窗小说网】无法读取章节列表\n2. 修复【新笔趣阁】正文加载出错\n3. 新增【望海阅读】",
   "list": [
     {
-      "name": "轻小说文库",
-      "url": "http://www.wenku8.net/index.php",
-      "category": 2,
-      "rank": 5,
-      "auth": true,
-      "version": 100
-    },
-    {
       "name": "必看网",
       "url": "https://www.biikan.com",
       "category": 0,
