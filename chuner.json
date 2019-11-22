@@ -19,6 +19,14 @@
       "version": 100
     },
     {
+      "name": "八一中文网[推荐]",
+      "url": "https://www.zwdu.com",
+      "category": 1,
+      "rank": 0,
+      "auth": false,
+      "version": 100
+    },
+    {
       "name": "思路客",
       "url": "https://www.siluke.tw",
       "category": 1,
