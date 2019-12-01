@@ -91,14 +91,6 @@
       "version": 101
     },
     {
-      "name": "红杏APP",
-      "url": "http://free.ilemi.cn",
-      "category": 1,
-      "rank": 8,
-      "auth": false,
-      "version": 100
-    },
-    {
       "name": "猎鹰小说APP",
       "url": "http://api.book.lieying.cn",
       "category": 1,
@@ -157,14 +149,6 @@
     {
       "name": "扎堆小说",
       "url": "http://touchlife.cootekservice.com",
-      "category": 1,
-      "rank": 0,
-      "auth": false,
-      "version": 100
-    },
-    {
-      "name": "中文书城APP",
-      "url": "http://app-inter-bookstore.cread.com",
       "category": 1,
       "rank": 0,
       "auth": false,
