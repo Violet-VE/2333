@@ -1,6 +1,6 @@
 {
   "name": "手打吧",
-  "version": 103,
+  "version": 104,
   "category": 1,
   "url": "https://www.shouda8.com",
   "charset": "utf-8",
@@ -25,7 +25,7 @@
         }
   },
   "content": {
-    "text": "#content"
+    "text": "#content > p:not(:last-child)"
   },
   "search": {
     "link": "https://www.shouda8.com/search.html@post->searchkey=${key}",
