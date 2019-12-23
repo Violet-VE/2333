@@ -1,6 +1,6 @@
 {
   "name": "By 纯二",
-  "summary": "This is just a book source repository.\n更新说明：\n1. 修复【无弹窗小说网】无法读取章节列表\n2. 修复【新笔趣阁】正文加载出错\n3. 新增【望海阅读】",
+  "summary": "This is just a book source repository.\n更新说明：\n1. 修复“手打小说网”更名【手打吧】\n                                                                                            20191223",
   "list": [
     {
       "name": "ABC小说网[推荐]",
@@ -171,12 +171,12 @@
       "version": 100
     },
     {
-      "name": "手打小说网",
+      "name": "手打吧",
       "url": "https://www.shouda8.com",
       "category": 1,
       "rank": 0,
       "auth": false,
-      "version": 102
+      "version": 103
     },
     {
       "name": "追书网①",
