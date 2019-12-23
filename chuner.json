@@ -353,30 +353,6 @@
       "rank": 0,
       "auth": false,
       "version": 103
-    },
-    {
-      "name": "有道翻译",
-      "url": "https://m.youdao.com",
-      "category": 4,
-      "rank": 0,
-      "auth": false,
-      "version": 100
-    },
-    {
-      "name": "成语查询",
-      "url": "仅支持查询首字",
-      "category": 4,
-      "rank": 0,
-      "auth": false,
-      "version": 100
-    },
-    {
-      "name": "词典",
-      "url": "https://www.zdic.net",
-      "category": 4,
-      "rank": 0,
-      "auth": false,
-      "version": 100
     }
   ]
 }
