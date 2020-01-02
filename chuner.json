@@ -323,14 +323,6 @@
       "version": 102
     },
     {
-      "name": "UU小说网",
-      "url": "http://www.uuxs.la",
-      "category": 1,
-      "rank": 0,
-      "auth": false,
-      "version": 101
-    },
-    {
       "name": "酷匠网",
       "url": "https://www.kujiang.com",
       "category": 1,
